@@ -131,4 +131,22 @@ body {
 
 body.dark .container {
     background: rgba(0,0,0,0.55);
+
+}
+
+.theme-switch label {
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.dark-icon {
+    display: none;
+}
+
+.theme-switch input:checked + label .dark-icon {
+    display: inline;
+}
+
+.theme-switch input:checked + label .icon:first-child {
+    display: none;
 }
