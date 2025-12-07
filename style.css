@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("images/2.jpg") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255,255,255,0.14);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 3.6rem 3.2rem;
+    max-width: 460px;
+    width: 92%;
+    text-align: center;
+    color: white
+}
+
+.pfp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 2rem auto;
+    
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.pfp:hover {
+    filter: brightness(1.5);
+    transform: translateY(-3px);
+}
+
+.name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+    transition: letter-spacing 0.3s ease, text-shadow 0.3s ease;
+}
+
+.name:hover {
+    letter-spacing: 3px;
+    text-shadow: 0 0 18px rgba(255,255,255,0.45);
+}
+
+.tagline {
+    font-size: 1.05rem;
+    opacity: 0.88;
+    margin-bottom: 2.6rem;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem 1.4rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.6rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.9);
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+}
+
+.links a:hover {
+    background: white;
+    color: #111;
+    transform: translateY(-3px);
+}
+
+.theme-switch {
+    display: flex;
+    justify-content: center;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.theme-switch label {
+    position: relative;
+    width: 120px;
+    height: 36px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.theme-switch input:checked + label {
+    background: #4fd1c5;
+}
+
+.theme-switch input:checked + label .knob {
+    transform: translateX(84px);
+}
+
+.theme-switch input:not(:checked) + label .light {
+    color: #111;
+}
+
+.theme-switch input:checked + label .dark {
+    color: #111;
+}
+
+body.dark .container {
+    background: rgba(0,0,0,0.55);
+}
